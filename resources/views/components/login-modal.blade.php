@@ -1,17 +1,3 @@
-<!-- <div class ="model fade" id ="authModel" tablindex="-1">
-    <div class="model-dialog model-lg model-dialog-centered"> 
-        <div class="model-content border-0 rounded-4 overflow-hidden">
-
-            <div class="row g-0">
-                <div class ="col-md-6 text-white p-4">
-                    <style></style>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div> -->
 <!-- Modal Login -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -34,10 +20,28 @@
 
                 <!-- RIGHT (LOGIN FORM) -->
                 <div class="col-md-6 p-4">
-                    <h5 class="fw-bold mb-4">Masuk</h5>
+
+                    <div class="text-center mb-4">
+                        <!-- <h5 class="fw-bold mb-3">Masuk</h5> -->
+
+                        <div class="d-flex justify-content-center gap-3">
+                            
+                            <button type = "submit" form="loginForm"
+                                class="btn btn-warning px-4">
+                                LOGIN
+                            </button>
+                
+                            @if (Route::has('register'))
+                                <a class="btn btn-outline-warning px-4" href="{{ route('register') }}">
+                                    REGISTER
+                                </a>
+                            @endif
+                        </div>
+                    </div>
+                    
 
                     <!-- form -->
-                    <form method="POST" action="{{ route('login') }}">
+                    <form id="loginForm" method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <!-- email -->

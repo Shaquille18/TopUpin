@@ -1,0 +1,25 @@
+.register-card {
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.login-modal-custom {
+    max-width: 880px;   /* pas di laptop */
+}
+
+.login-modal-custom .modal-content {
+    min-height: 520px;  /* bikin modal lebih tinggi */
+}
+
+.nav-auth-btn {
+    background: transparent;
+    color: #000;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: all 0.26 ease-in-out;
+}
+
+.nav-auth-btn:hover{
+    background-color: #ffc107;
+    color: #000;
+}
