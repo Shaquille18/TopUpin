@@ -1,6 +1,6 @@
 @extends('layouts.app')
   @section('content')
-      <h1>Daftar Game</h1>
+      <h1 class="text-center">Daftar Game</h1>
       <div class="row">
           @foreach($games as $game)
               <div class="col-md-4">

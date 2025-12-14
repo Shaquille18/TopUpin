@@ -1,5 +1,106 @@
-.register-card {
-    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+.nav-base{
+    background-color: #05022c;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: sticky;
+}
+
+.nav-base .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.user-name{
+    color: white !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.user-name:hover{
+    color: #d2278d !important;
+}
+
+.sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    background: #05022c;
+    transition: 0.3s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 1001;
+}
+
+.sidebar-logo{
+    height: 40px;
+    margin: 20px 30px;
+}
+
+.sidebar a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.sidebar-text{
+    color: #fff;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.sidebar a:hover{
+    color: #d2278d;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.hamburger {
+    font-size: 28px;
+    cursor: pointer;
+    padding: 15px;
+    color: #fff;
+    margin-right: 15px;
+    margin-left: -10px;
+}
+
+.hamburger:hover {
+    font-size: 28px;
+    color: #d2278d;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.4);
+    display: none;
+    z-index: 1000;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    margin-left: -8px;
+    
+}
+
+.brand-text{
+    color: #d2278d;
+    margin-left: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.brand-logo{
+    height: 36px;
 }
 
 .login-modal-custom {
@@ -11,7 +112,7 @@
 }
 
 .nav-auth-btn {
-    background: transparent;
+    background: #d2278d;
     color: #000;
     border: none;
     padding: 6px 14px;
@@ -22,4 +123,74 @@
 .nav-auth-btn:hover{
     background-color: #ffc107;
     color: #000;
+}
+
+.register-card {
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+    justify-content: center;
+    height: 520px;
+}
+/* WRAPPER */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #05022c;
+    padding: 40px;
+}
+
+/* CARD */
+.auth-card {
+    width: 1000px;
+    max-width: 100%;
+    min-height: 620px;   /* ⬅️ TAMBAHKAN INI */
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 20px 50px rgba(0,0,0,.2);
+}
+
+/* LEFT */
+.auth-left {
+    width: 45%;
+    padding: 50px;
+    color: #fff;
+    background: linear-gradient(135deg,#2b2f77,#ff8a00);
+}
+
+.auth-left h1 {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+/* RIGHT */
+.auth-right {
+    width: 55%;
+    padding: 50px;
+}
+
+/* FORM */
+.auth-right .form-control {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.auth-right .form-control:focus {
+    box-shadow: none;
+    border-color: #f44336;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .auth-card {
+        flex-direction: column;
+    }
+
+    .auth-left,
+    .auth-right {
+        width: 100%;
+    }
 }

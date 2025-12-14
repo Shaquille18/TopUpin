@@ -28,11 +28,35 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        @yield('navbar')
+        @if (!View::hasSection('hideNavbar'))
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm nav-base">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'TOPuPG') }}
+
+                @auth
+                    <div class="hamburger" id="hamburger">
+                        ☰
+                    </div>
+
+                    <div class="sidebar" id="sidebar">
+                        <img src="{{ asset('img/logo.png') }}" alt="TopUpin" class ="sidebar-logo"> </br>
+                        <p class="sidebar-text">Fullfill your wishest in </br> our store</p> </br>
+                        <a href="{{ route('dashboard') }}">Home</a>
+                        <a href="{{ route('games.show', ['id' => 1]) }}">Produk</a>
+                        <a href="{{ route('transactions.create') }}">Transaksi</a>
+                    </div>
+
+                    <div class="overlay" id="overlay"></div>
+                @endauth
+
+                <a class="navbar-brand brand" href="{{ route('dashboard') }}">
+                    <img src="{{ asset('img/logo.png') }}" 
+                        alt="TopUpin" 
+                        class ="brand-logo">
+                        <span class="brand-text">Lets TopUp</span>
+                    <!-- {{ config('app.name',  asset('img/logo.png')) }} -->
                 </a>
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -56,7 +80,8 @@
                                     </button>
                                 </li>
                             @endif
-
+                            
+                            <!-- register button on nav -->
                             <!-- @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="btn nav-auth-btn" href="{{ route('register') }}">
@@ -66,7 +91,7 @@
                             @endif -->
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle user-name" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
@@ -87,6 +112,7 @@
                 </div>
             </div>
         </nav>
+        @endif
 
         
         
@@ -96,6 +122,8 @@
 
     </div>
     @include('components.login-modal')
+    
+    <script src="{{ asset('js/custom.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
