@@ -3,11 +3,16 @@
     padding-top: 12px;
     padding-bottom: 12px;
     position: sticky;
+    z-index: 1100;
 }
 
 .nav-base .container {
     padding-left: 0;
     padding-right: 0;
+}
+
+.nav-auth-btn{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .user-name{
@@ -28,7 +33,7 @@
     background: #05022c;
     transition: 0.3s ease;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    z-index: 1001;
+    z-index: 1050;
 }
 
 .sidebar-logo{
@@ -40,6 +45,7 @@
     color: white;
     text-decoration: none;
     display: block;
+
     padding: 10px 20px;
     margin-left: 15px;
     transition: 0.3s;

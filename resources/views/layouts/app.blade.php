@@ -42,7 +42,7 @@
                         <img src="{{ asset('img/logo.png') }}" alt="TopUpin" class ="sidebar-logo"> </br>
                         <p class="sidebar-text">Fullfill your wishest in </br> our store</p> </br>
                         <a href="{{ route('dashboard') }}">Home</a>
-                        <a href="{{ route('games.show', ['id' => 1]) }}">Produk</a>
+                        <a href="{{ route('home') }}">Produk</a>
                         <a href="{{ route('transactions.create') }}">Transaksi</a>
                     </div>
 
@@ -116,12 +116,14 @@
 
         
         
-        <main class ="py-4">
+        <main class ="py-4 px-4">
             @yield('content')
         </main>
 
     </div>
     @include('components.login-modal')
+
+    <small class="footer text-center">Copyright and Copy @ {{ date('Y') }}</small>
     
     <script src="{{ asset('js/custom.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

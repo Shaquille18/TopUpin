@@ -18,7 +18,7 @@ class GameController extends Controller
     public function show($id)
     {
         $game = Game::findOrFail($id);
-        $product = $game->products;
+        $products = $game->products;
         return view('games.show', compact('game', 'products'));
     }
 }
