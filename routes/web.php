@@ -14,6 +14,11 @@ Route::get('/games/{id}', [GameController::class, 'show'])->name('games.show');
 Route::get('/transactions/create', [TransactionController::class, 'create'])->middleware('auth')->name('transactions.create');
 Route::post('/transactions', [TransactionController::class, 'store'])->middleware('auth')->name('transactions.store');
 
+Route::get('/transactions', [TransactionController::class, 'index'])
+    ->middleware('auth')
+    ->name('transactions.index');
+
+
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

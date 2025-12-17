@@ -42,7 +42,7 @@
                         <p class="sidebar-text">Fullfill your wishest in </br> our store</p> </br>
                         <a href="{{ route('home') }}">Home</a>
                         <a href="{{ route('games.index') }}">Games</a>
-                        <a href="{{ route('transactions.create') }}">Transaksi</a>
+                        <a href="{{ route('transactions.index') }}">Transaksi</a>
                     </div>
 
                     <div class="overlay" id="overlay"></div>

@@ -21,6 +21,7 @@ class TransactionController extends Controller
         $request->validate([
             'product_id' => 'required|exists:products,id',
             'payment_method' => 'required|in:transfer_bank,gopay,dana,kartu_kredit',
+            'user_game_id' => 'required|string|max:50',
         ]);
 
         $product = Product::find($request->product_id);
@@ -28,6 +29,7 @@ class TransactionController extends Controller
             'user_id' => Auth::id(),
             'game_id' => $product->game_id,
             'product_id' => $product->id,
+            'user_game_id'  => $request->user_game_id,
             'amount' => $product->price,
             'payment_method' => $request->payment_method,
             'status' => 'completed',
@@ -35,5 +37,16 @@ class TransactionController extends Controller
 
         return redirect()->route('home')->with('success', 'Top-up berhasil! Metode: ' . $request->payment_method);
     }
+
+    public function index()
+    {   
+    $transactions = Transaction::with(['game', 'product'])
+        ->where('user_id', Auth::id())
+        ->latest()
+        ->get();
+
+    return view('transactions.index', compact('transactions'));
+    }
+
 }
   

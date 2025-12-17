@@ -292,6 +292,70 @@ main {
     );
 }
 
+.transaction-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.transaction-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    transition: transform .2s ease;
+}
+
+.transaction-card:hover {
+    transform: translateY(-5px);
+}
+
+.trx-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: #000;
+}
+
+.trx-status {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* status warna */
+.trx-status.completed {
+    background: #d4edda;
+    color: #155724;
+}
+
+.trx-status.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.trx-status.failed {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.trx-body p {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #000;
+}
+
+.trx-date {
+    font-size: 12px;
+    color: #888;
+    margin-top: 8px;
+}
+
+
 
 
 
