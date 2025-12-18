@@ -35,7 +35,7 @@ class TransactionController extends Controller
             'status' => 'completed',
         ]);
 
-        return redirect()->route('home')->with('success', 'Top-up berhasil! Metode: ' . $request->payment_method);
+return redirect()->route('home')->with('success', 'Selamat! Anda sudah berhasil top up ' . $product->name . ', sering-sering ya!');
     }
 
     public function index()

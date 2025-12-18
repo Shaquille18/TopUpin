@@ -33,6 +33,21 @@
         </div>
       </section>
       
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+      @if(session('success'))
+      <script>
+          Swal.fire({
+              title: 'Berhasil!',
+              text: "{{ session('success') }}",
+              icon: 'success',
+              confirmButtonText: 'Oke',
+              background: '#1a1a2e', 
+              color: '#fff',
+              confirmButtonColor: '#007bff'
+          });
+      </script>
+      @endif
   @endsection
   
 
