@@ -13,7 +13,7 @@
             <div class="col-md-4 mb-4">
                 <h6 class="footer-title">Informasi</h6>
                 <ul class="footer-links">
-                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="/about">Tentang Kami</a></li>
                     <li><a href="#">Cara Top Up</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Hubungi Kami</a></li>
