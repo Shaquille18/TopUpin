@@ -4,41 +4,26 @@
 
 
 @section('content')
-<!-- <div class="auth-wrapper">
-    <div class="auth-card register-card">
 
-        left side
-        <div class="auth-left">
-            <h1>Hello </br> World.</h1>
-            <p>
-                Lorem, ipsum dolor sit </br> 
-                amet consectetur adipisicing elit. Provident, ipsa nobis? 
-            </p>
-        </div>
-
-
-        right side
-         <div class="auth-right">
-
-         </div>
-
-    </div>
-</div> -->
 <div class="auth-wrapper">
     <div class="auth-card register-card">
 
         <!-- LEFT SIDE -->
-        <div class="auth-left">
-            <h1>Hello<br>World.</h1>
-            <p>
-                Bergabunglah dan nikmati berbagai promo,
-                kemudahan transaksi, dan fitur eksklusif.
-            </p>
+        <div class="auth-left rounded-5">
+            <img class="logo  m-4 my-Logo"src="{{ asset('img/logo.png') }}" alt="logo  ">
+            <div class="auth-lefts">
+                <h1>Hello<br>World.</h1>
+                <p>
+                    Bergabunglah dan nikmati berbagai promo,
+                    kemudahan transaksi, dan fitur eksklusif.
+                </p>
+                            
+            </div>
         </div>
 
         <!-- RIGHT SIDE -->
         <div class="auth-right">
-            <h3 class="mb-4 fw-bold">Register</h3>
+            <h3 class="mb-4 fw-bold c text-primary fs-1">Register</h3>
 
             <form method="POST" action="{{ route('register') }}">
                 @csrf
@@ -102,7 +87,7 @@
                     Register
                 </button>
 
-                <div class="text-center mt-3">
+                <div class="text-center mt-3 text-secondary">
                     <small>
                         Sudah punya akun?
                         <a href="{{ route('login') }}">Masuk</a>

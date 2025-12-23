@@ -14,25 +14,25 @@
           @endforeach
         </div>
       </section>
+      <div class="container home-card">
+        <section class="mb-5">
+          <h4 class="section-title">📱 Game Mobile</h4>
+          <div class ="row g-3">
+            @foreach ($mobileGames as $game)
+              @include('components.game-card', ['game' => $game])
+            @endforeach
+          </div>
+        </section>
 
-      <section class="mb-5">
-        <h4 class="section-title">📱 Game Mobile</h4>
-        <div class ="row g-3">
-          @foreach ($mobileGames as $game)
-            @include('components.game-card', ['game' => $game])
-          @endforeach
-        </div>
-      </section>
-
-      <section class="mb-5">
-        <h4 class="section-title">💻 Game PC</h4>
-        <div class ="row g-3">
-          @foreach ($pcGames as $game)
-            @include('components.game-card', ['game' => $game])
-          @endforeach
-        </div>
-      </section>
-      
+        <section class="mb-5">
+          <h4 class="section-title">💻 Game PC</h4>
+          <div class ="row g-3">
+            @foreach ($pcGames as $game)
+              @include('components.game-card', ['game' => $game])
+            @endforeach
+          </div>
+        </section>
+      </div>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
       @if(session('success'))

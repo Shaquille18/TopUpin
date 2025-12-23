@@ -11,22 +11,24 @@
             </div>
 
             <div class="col-md-4 mb-4">
-                <h6 class="footer-title">Informasi</h6>
+                <h6 class="footer-title">Information</h6>
                 <ul class="footer-links">
-                    <li><a href="/about">Tentang Kami</a></li>
-                    <li><a href="#">Cara Top Up</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="#">How To Top Up</a></li>
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
 
-            <div class="col-md-4 mb-4">
-                <h6 class="footer-title">Pembayaran</h6>
-                <div class="payment-icons">
-                    <img src="{{ asset('img/payments/ovo.png') }}">
-                    <img src="{{ asset('img/payments/dana.png') }}">
-                    <img src="{{ asset('img/payments/gopay.png') }}">
-                    <img src="{{ asset('img/payments/qris.png') }}">
+            <div class="col-md-4 mb-4 payment">
+                <h6 class="footer-title">Payment Method</h6>
+                <div class="container icons">
+                    <div class="payment-icons">
+                        <img src="{{ asset('img/payment/ovo.png') }}">
+                        <img src="{{ asset('img/payment/dana.png') }}">
+                        <img src="{{ asset('img/payment/gopay.png') }}">
+                        <img src="{{ asset('img/payment/QRIS.png') }}">
+                    </div>
                 </div>
             </div>
 

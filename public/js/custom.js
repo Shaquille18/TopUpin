@@ -21,4 +21,27 @@ document.addEventListener('DOMContentLoaded', function () {
             overlay.classList.remove('active');
         });
     });
+
+    const popularSlider = document.querySelector('.popularSwiper');
+
+    if (popularSlider && typeof Swiper !== 'undefined') {
+        new Swiper('.popularSwiper', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: { slidesPerView: 3 },
+                1024: { slidesPerView: 4 },
+            }
+        });
+    }
 });
+

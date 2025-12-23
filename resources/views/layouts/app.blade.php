@@ -17,9 +17,13 @@
     <!-- Scripts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- CSS kamu -->
+    <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
     @yield('styles')
    
 </head>
@@ -43,6 +47,7 @@
                         <a href="{{ route('home') }}">Home</a>
                         <a href="{{ route('games.index') }}">Games</a>
                         <a href="{{ route('transactions.index') }}">Transaksi</a>
+                        <a href="{{ route('about')}}">About Us</a>
                     </div>
 
                     <div class="overlay" id="overlay"></div>
@@ -144,5 +149,6 @@
     
     <script src="{{ asset('js/custom.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>

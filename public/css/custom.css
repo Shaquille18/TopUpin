@@ -160,10 +160,27 @@
 
 /* LEFT */
 .auth-left {
+    position: relative;
     width: 45%;
-    padding: 50px;
-    color: #fff;
     background: linear-gradient(135deg,#2b2f77,#ff8a00);
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    /* align-items: center; */
+}
+.auth-lefts{
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #fff;
+}
+
+.my-Logo{
+    left: 30px;
+    max-width: 25%;
+    height: auto;
+    position: relative;
+    margin-left: 30px;
+    margin-top: 40px;
 }
 
 .auth-left h1 {
@@ -182,6 +199,10 @@
     border-radius: 0;
     border: none;
     border-bottom: 1px solid #ccc;
+}
+
+.form-label{
+    color: #000;
 }
 
 .auth-right .form-control:focus {
@@ -203,10 +224,12 @@
 }
 
 
-.card-img-top{
-    width: 30vh;
-   
+.card-img-top {
+    width: 100%;
+    height: 180px;          /* bebas, sesuaikan */
+    object-fit: cover;
 }
+
 
 .product-btn{
     justify-content: center;
@@ -226,6 +249,34 @@ body {
 }
 main {
     background: transparent;
+}
+
+/* FIX WIDTH CARD DI POPULAR SWIPER */
+
+
+
+
+/* CARD WRAPPER MOBILE & PC */
+.section-card {
+    background: #0b0a2e;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+.section-card .section-title {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* biar card gak nempel ke sisi layar */
+.home-card {
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 50px !important;     
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 30px rgba(241, 239, 239, 0.35);
 }
 
 
@@ -290,6 +341,7 @@ main {
         rgba(255,255,255,0.25),
         transparent
     );
+    
 }
 
 .transaction-wrapper {
@@ -355,7 +407,34 @@ main {
     margin-top: 8px;
 }
 
+.payment-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.payment-icons img {
+    height: 20px;        /* tinggi seragam */
+    width: auto;         /* lebar menyesuaikan */
+    object-fit: contain;
+    display: block;
+}
+
+.icons{
+    padding: 30px;
+    justify-content: center;
+    background-color: #888;
+    border-radius: 20px;
+}
+
+.payment{
+    justify-content: center;
+}
+
+.footer-titlea{
+    position: relative;
+}
 
 
 
@@ -370,3 +449,17 @@ main {
         width: 100%;
     }
 }
+/* TABLET */
+@media (max-width: 992px) {
+    .card-popular .swiper-slide {
+        width: 260px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .card-popular .swiper-slide {
+        width: 80%;
+    }
+}
+
